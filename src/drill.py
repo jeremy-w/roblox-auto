@@ -7,6 +7,11 @@
 # * Keyboard movement: left is A, forward is W
 # * Starting with drill armed
 # * Camera is zoomed all the way out
+#
+# Notes:
+# * Almost every world has the same 3 drill speeds, but at increasing powers.
+# * Gold machine doubles the pet multiplier.
+# * Rainbow machine gives 1.5x the gold pet's multiplier, for 3x over the initial multiplier.
 import pyautogui as p
 from time import sleep
 
