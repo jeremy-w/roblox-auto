@@ -22,7 +22,7 @@ BTN_MAIN = (900, 541)  # when freshly opened
 BTN_CLOSE = (1006, 296)  # drill shop close button
 
 SAND_SEC = 4.8
-BEST_DRILL_SEC = 20  # magic drill 3 on magic
+BEST_DRILL_SEC = 20  # greek drill 3 on greek; better too long than too short
 MID_DRILL_SEC = 50  # greek drill 2 on greek
 WIN_W_SEC = 1
 
@@ -44,7 +44,7 @@ def left(secs):
 def teleport_main():
     p.click(*BTN_WORLDS)
     sleep(1)  # wait for UI
-    p.moveTo(x=BTN_MAIN[0], y=BTN_MAIN[1], duration=0.25)
+    p.moveTo(x=BTN_MAIN[0], y=BTN_MAIN[1])
     p.scroll(50)  # ensure at top
     p.click()
 
@@ -53,7 +53,7 @@ def teleport_magic():
     p.click(*BTN_WORLDS)
     sleep(1)
     w, h = p.size()
-    p.moveTo(x=w/2, y=h/2, duration=0.25)
+    p.moveTo(x=w/2, y=h/2)
     # - still seems to be "towards end of document", even with natural scrolling.
     p.scroll(-50)
     p.click(*BTN_MAGIC)
@@ -63,7 +63,7 @@ def teleport_greece():
     p.click(*BTN_WORLDS)
     sleep(1)
     w, h = p.size()
-    p.moveTo(x=w/2, y=h/2, duration=0.25)
+    p.moveTo(x=w/2, y=h/2)
     # - still seems to be "towards end of document", even with natural scrolling.
     p.scroll(-50)
     p.click(*BTN_GREECE)
@@ -107,7 +107,7 @@ def t():
     while True:
         run_count += 1
         print("starting run:", run_count)
-        drill_to_bottom(MID_DRILL_SEC)
+        drill_to_bottom(BEST_DRILL_SEC)
 
 
 def main():
