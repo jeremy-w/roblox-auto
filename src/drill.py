@@ -74,8 +74,6 @@ def drill_to_bottom(hold_time):
     # Assume drill is armed
 
     # Reset to known location
-    teleport_main()
-    # teleport_magic()
     teleport_greece()
 
     # Run onto sand.
